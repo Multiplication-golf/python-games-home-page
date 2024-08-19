@@ -1,0 +1,583 @@
+<!doctype html>
+<html>
+  <head>
+    <script data-main="scripts/main" src="scripts/require.js"></script>
+
+    <style>
+      .button {
+        background-color: Cyan;
+        -webkit- border-radius: 10px;
+        border-radius: 10px;
+        color: black;
+        curser: pointer;
+        font-family: sans-serif;
+        font-size: 15px;
+        padding: 20px 20px;
+        text-aling: center;
+        box-shadow: 0 0 20px Cyan;
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      .button2 {
+        background-color: DodgerBlue;
+        -webkit- border-radius: 5px;
+        border-radius: 5px;
+        color: black;
+        curser: pointer;
+        font-family: sans-serif;
+        font-size: 60;
+        padding: 2px 5px;
+        text-aling: center;
+        box-shadow: 0 0 10px DodgerBlue;
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      .button3 {
+        background-color: DodgerBlue;
+        -webkit- border-radius: 5px;
+        border-radius: 5px;
+        color: black;
+        curser: pointer;
+        font-family: sans-serif;
+        font-size: 60;
+        padding: 2px 5px;
+        text-aling: center;
+        box-shadow: 0 0 10px DodgerBlue;
+        display: inline-block;
+        text-decoration: none;
+        position: absolute;
+        top: 0.1;
+        right: 0;
+        margin-top: 1px;
+        margin-right: 14px;
+      }
+
+      .button4 {
+        background-color: DodgerBlue;
+        -webkit- border-radius: 5px;
+        border-radius: 5px;
+        color: black;
+        curser: pointer;
+        font-family: sans-serif;
+        font-size: 60;
+        padding: 2px 5px;
+        text-aling: center;
+        box-shadow: 0 0 10px DodgerBlue;
+        display: inline-block;
+        text-decoration: none;
+        position: absolute;
+        top: 0.1;
+        right: 0;
+        margin-top: 1px;
+        margin-right: 94px;
+      }
+      .headingText {
+        color: Cyan; 
+        box-shadow: 0 0 20px Cyan
+        text-align: center;
+        display: none;
+      }
+
+      .button5 {
+        background-color: Cyan;
+        -webkit- border-radius: 5px;
+        border-radius: 10px;
+        color: black;
+        curser: pointer;
+        font-family: sans-serif;
+        font-size: 60;
+        padding: 5px 5px;
+        text-aling: center;
+        box-shadow: 0 0 20px Cyan;
+        display: inline-block;
+        text-decoration: none;
+
+      }
+      .button6 {
+        background-color: DodgerBlue;
+        -webkit- border-radius: 5px;
+        border-radius: 5px;
+        color: black;
+        curser: pointer;
+        font-family: sans-serif;
+        font-size: 60;
+        padding: 2px 5px;
+        text-aling: center;
+        box-shadow: 0 0 10px DodgerBlue;
+        display: inline-block;
+        text-decoration: none;
+        position: absolute;
+        top: 0.2;
+        right: 0;
+        margin-top: 1px;
+        margin-right: 159px;
+      }
+      
+      .lists {
+        color: snow;
+        padding: 10px;
+        display: none;
+        
+      }
+
+      .button7 {
+        background-color: DodgerBlue;
+        -webkit- border-radius: 5px;
+        border-radius: 5px;
+        color: black;
+        curser: pointer;
+        font-family: sans-serif;
+        font-size: 60;
+        padding: 2px 5px;
+        text-aling: center;
+        box-shadow: 0 0 10px DodgerBlue;
+        display: inline-block;
+        text-decoration: none;
+        position: absolute;
+        top: 0.2;
+        left: 0;
+        margin-top: 1px;
+        margin-left: 15px;
+      }
+
+      .button8 {
+        background-color: DodgerBlue;
+        -webkit- border-radius: 5px;
+        border-radius: 5px;
+        color: black;
+        curser: pointer;
+        font-family: sans-serif;
+        font-size: 60;
+        padding: 2px 5px;
+        text-aling: center;
+        box-shadow: 0 0 10px DodgerBlue;
+        display: inline-block;
+        text-decoration: none;
+        position: absolute;
+        top: 0.2;
+        left: 0;
+        margin-top: 1px;
+        margin-left: 259px;
+      }
+
+      .nav {
+        background-color: Cyan;
+        border: 2px solid black;
+        padding: 7px;
+        text-align: center;
+      }
+      .center {
+        text-align: center;
+      }
+      .side-rectangle {
+        position: absolute;
+        background-color: DodgerBlue;
+        height: 84vh; 
+        width:15vw;
+      }
+      .left-rectangle {
+        left: 0;
+        margin-left: 50px;
+
+      }
+      .right-rectangle {
+        right: 0;
+        margin-right: 50px;                         
+        
+      }
+      .slidecontainer {
+        width: 100%; 
+      }
+
+      
+      .slider {
+        -webkit-appearance: none; 
+        appearance: none;
+        width:750px; /* Full-width */
+        height: 25px; /* Specified height */
+        border-radius: 5px;
+        background: DeepSkyBlue;        
+        outline: none; 
+        opacity: 0.9;             
+        -webkit-transition: .1s;                                  
+        transition: opacity .1s;
+      }
+
+      /* Mouse-over effects */
+      .slider:hover {
+        opacity: 1; /* Fully shown on mouse-over */
+      }
+
+      /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none; /* Override default look */
+        appearance: none;            
+        border-radius: 5px;
+        width: 27px; /* Set a specific slider handle width */
+        height: 27px; /* Slider handle height */
+        background: aqua; /* Green background */
+        cursor: pointer; /* Cursor on hover */
+      }
+
+      .slider::-moz-range-thumb {
+        width: 27px; /* Set a specific slider handle width */
+        height: 27px;                
+        background: aqua; /* Green background */
+        cursor: pointer; 
+      }
+      .FadeIn {
+        color: white;                
+        text-align: center;
+        display: none;
+        animation: fadeIn 5s;
+      }
+      @keyframes fadeIn {
+        0% { opacity: 0; }                      
+        100% { opacity: 1; }
+      }
+      .Main_text {
+        color: white;
+        text-align: center;
+        display: none;
+      }
+      .roundcorners {
+        border-radius: 5px;
+        background-color: DodgerBlue;
+        padding: 10px;
+        width: 350px;
+        height: 50px;
+        text-align: center;
+        /* display: none; */
+      }
+      .displayBox {
+        background-color: darkslategray;
+        -webkit-border-radius: 20px;
+        border-radius: 20px;
+        border: 2px solid black;
+        width: 450px;
+        text-align: center;
+        height: 550px;
+        display: none;
+      }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Games home page.com</title>
+    <link rel="icon" type="image/x-icon" href="logo made from shapes.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#hidden2").click(function(){
+          $("#email").fadeIn();
+        });
+        $("#SubmitButton").click(function(){
+          $("#textID").fadeIn();
+        });
+      });
+      </script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body style="background-color: black; border: 10px double DeepSkyBlue">
+    <div class="nav">
+      <button class="button2" onclick="home()">Home</button>
+      <button class="button4" onclick="sport()">Support</button>
+      <button class="button3" onclick="feedback()">Feed back</button>
+      <button class="button6" onclick="php()">Get a php data server</button>
+      <button class="button7" onclick="phpCurrent()">current php websites and there billing</button>
+      <button class="button8" onclick="htmlpywrite()">htmlpywrite</button>
+    </div>
+    <main>
+      <h1 id="main heading" style="color: Cyan; box-shadow: 0 0 20px Cyan">
+        Python games
+      </h1>
+      <h2 id="breakHeading" class="headingText">storing comments and site data</h2>
+      <p id="secondary heading" style="color: Snow">
+        User friendly games made in python
+      </p>
+      <img id="logo" src="logo2.png" alt="" height="200" width="200" />
+      <p id="only for home" style="color: Snow">
+        free, fun, and fast games for kids
+      </p>
+      <p id="only for home2" style="color: Snow">Games available</p>
+      <div id="button list" class="contier">
+        <button id="1" class="button" onclick="window.open('https://replit.com/@anderson065599699595940303/platformer?v=1')">
+          plaformer
+        </button>
+        <button id="2" class="button" onclick="window.open('https://replit.com/@anderson065599699595940303/hang-man?v=1')">hangman</button>
+        <button id="3" class="button" onclick="window.open('https://replit.com/@anderson065599699595940303/sci-fi-clicker-game?v=1')">
+          sci-fi clicker game
+        </button>
+        <button id="4" class="button" onclick="window.open('https://replit.com/@anderson065599699595940303/dance-world?v=1')">
+          dance world
+        </button>
+        <button id="5" class="button" onclick="window.open('https://replit.com/@anderson065599699595940303/flapy-bird-pygame?v=1')">
+          flappy bird pygame
+        </button>
+        <button id="6" class="button" onclick="window.open('https://replit.com/@anderson065599699595940303/bee-game2?v=1')">
+          bee game
+        </button>
+      </div>
+      <div id="hidden" style="display: none">
+        <button id="hidden1" class="button5">report a bug</button>
+        <button id="hidden2" class="button5">contact us</button>
+      </div>
+      <form id="commentForm" method="Post" style="display: none;" action="https://spatialnormalbraces.anderson065599699595940303.repl.co">
+        <textarea id="userComment" name="user_comment" rows="5" cols="40"></textarea><br>
+        <div class="center">
+          <input type="submit" value="Submit" class="button5">
+        </div>
+      </form>
+      <p style="color: Snow; display: none;" id="power">Powered by the python games php server</p>
+
+      <div class="side-rectangle left-rectangle">
+        <img src="new games (1).gif" style="height: 84vh; width:15vw;"/>
+      </div>
+      <div class="side-rectangle right-rectangle">
+        <img src="new games (5).gif" style="height: 84vh; width:15vw;"/>
+      </div>
+      
+      <form id="php_slection" method="Post" style="display: none;" action=https://server-that-make-more-servers.anderson065599699595940303.repl.co>
+        <div class="slidecontainer">
+          <input type="range" min="100" max="10000" value="5000" class="slider" step="100" id="requestLimt" name="requestLimt">
+        </div>
+        <p id="slider1 output" style="color: Snow; text-align: center;"></p>
+        
+        <p id="price" style="color: Snow; text-align: center;">Your request limts slection : </p>
+        <br>
+        <p style="color: Snow; text-align: center;">Server name: </p>
+        <div class="center">
+          <textarea id="serverName" name="serverName" rows="1" cols="8" value="server name"></textarea><br>
+        </div>
+        <p style="color: Snow; text-align: center;">Server input varible (The data or comment to input to the server): </p>
+        <div class="center">
+          <textarea id="accessKey" name="accessKey" rows="1" cols="8" value="access Key"></textarea><br>
+        </div>
+        <br>
+        <div class="center">
+          <input type="submit" value="Submit" id="SubmitButton" class="button5">
+        </div>
+        <p style="color: Snow; text-align: center;">
+          How to acess and input server data:
+        </p>
+        <p style="color: Snow;">
+          &emsp;// This will only work in html look up how to use jquery in other languages<br>
+          &emsp;// first in the head put (script src="https://code.jquery.com/jquery-3.6.0.min.js"/script)<br>
+          &emsp;$(document).ready(function () {<br>
+          &emsp;&emsp;$('#yourFrom').submit(function (event) {<br>
+          &emsp;&emsp;&emsp;event.preventDefault();<br>
+          &emsp;&emsp;&emsp;var yourFrom = $(this).serialize(); // put your form name here. If not don't include this line.<br>
+          &emsp;&emsp;&emsp;var data = $('#input').val(); // label your text input box this were (input) is. <br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;// other wise put some other var in there<br>
+          &emsp;&emsp;&emsp;var Server_access_ID = "Server access ID";<br>
+          &emsp;&emsp;&emsp;$.post("https://server-that-make-more-servers.anderson065599699595940303.repl.co", {<br>
+          &emsp;&emsp;&emsp;&emsp;Server_access: data,<br>
+          &emsp;&emsp;&emsp;&emsp;Server_access_ID: Server_access_ID  // this will apper below once you buy the server<br>
+          &emsp;&emsp;&emsp;}, function (response) {<br>
+          &emsp;&emsp;});<br>
+          &emsp;});<br>
+        });<br>
+      </p>
+      </form>
+      <p class="Main_text" id="textID">Server access ID:</p>
+      <p class="Main_text" id="email">someName@someSite.com</p>
+      <div id="php servers" class="lists">
+        <ul>
+          <li><div class="roundcorners">test: requests left 5748</div></li>
+          <li><div class="roundcorners">big server: requests left 203</div></li>
+          <li><div class="roundcorners">Python game server: requests left (lol i made it so i get ∞ requests)</div></li>
+        </ul>
+      </div>
+      <div class="displayBox" id="htmlBox">
+        <img src="html_logo.png" style="height: 250px; width:250px;padding:20px"/>
+        
+      </div>
+      
+      <script>
+        function htmlpywrite() {
+          document.getElementById("main heading").innerHTML = "About htmlpywrite";
+          document.getElementById("secondary heading").style.display = "none";
+          document.getElementById("logo").style.display = "none";
+          document.getElementById("php servers").style.display = "none";
+          document.getElementById("only for home").style.display = "none";
+          document.getElementById("only for home2").style.display = "none";
+          document.getElementById("breakHeading").style.display = "none";
+          document.getElementById("button list").style.display = "none";
+          document.getElementById("power").style.display = "none";
+          document.getElementById("hidden").style.display = "none";
+          document.getElementById("email").style.display = "none";
+          document.getElementById("commentForm").style.display = "none";
+          document.getElementById("php_slection").style.display = "none";
+          document.getElementById("textID").style.display = "none";
+          document.getElementById("htmlBox").style.display = "block";
+        }
+      </script>
+
+      <script>
+        function phpCurrent() {
+          document.getElementById("main heading").innerHTML = "Server Stats";
+          document.getElementById("secondary heading").style.display = "none";
+          document.getElementById("logo").style.display = "none";
+          document.getElementById("php servers").style.display = "block";
+          document.getElementById("only for home").style.display = "none";
+          document.getElementById("only for home2").style.display = "none";
+          document.getElementById("breakHeading").style.display = "none";
+          document.getElementById("button list").style.display = "none";
+          document.getElementById("power").style.display = "none";
+          document.getElementById("hidden").style.display = "none";
+          document.getElementById("email").style.display = "none";
+          document.getElementById("commentForm").style.display = "none";
+          document.getElementById("php_slection").style.display = "none";
+          document.getElementById("textID").style.display = "none";
+          document.getElementById("htmlBox").style.display = "none";
+        }
+      </script>
+
+      
+      <script language="Javascript">
+        function sport() {
+          document.getElementById("main heading").innerHTML = "Support";
+          document.getElementById("secondary heading").style.display = "none";
+          document.getElementById("logo").style.display = "none";
+          document.getElementById("only for home").innerHTML = "how can we help";
+          document.getElementById("only for home2").style.display = "none";
+          document.getElementById("breakHeading").style.display = "none";
+          document.getElementById("button list").style.display = "none";
+          document.getElementById("hidden").style.display = "block";
+          document.getElementById("email").style.display = "none";
+          document.getElementById("power").style.display = "none";
+          document.getElementById("commentForm").style.display = "none";
+          document.getElementById("php_slection").style.display = "none";
+          document.getElementById("textID").style.display = "none";
+          document.getElementById("php servers").style.display = "none";
+          document.getElementById("htmlBox").style.display = "none";
+        }
+
+        function home() {
+          document.getElementById("main heading").innerHTML = "Python games";
+          document.getElementById("secondary heading").style.display = "block";
+          document.getElementById("logo").style.display = "block";
+          document.getElementById("breakHeading").style.display = "none";
+          document.getElementById("only for home").innerHTML = "free, fun, and fast games for kids";
+          document.getElementById("only for home2").style.display = "block";
+          document.getElementById("button list").style.display = "block";
+          document.getElementById("email").style.display = "none";
+          document.getElementById("power").style.display = "none";
+          document.getElementById("hidden").style.display = "none";
+          document.getElementById("commentForm").style.display = "none";
+          document.getElementById("php_slection").style.display = "none";
+          document.getElementById("textID").style.display = "none";
+          document.getElementById("php servers").style.display = "none";
+          document.getElementById("htmlBox").style.display = "none";
+        }
+        function feedback() {
+          document.getElementById("main heading").innerHTML = "Feed back";
+          document.getElementById("secondary heading").style.display = "none";
+          document.getElementById("logo").style.display = "none";
+          document.getElementById("only for home").innerHTML = "What feedback do you have";
+          document.getElementById("only for home2").style.display = "none";
+
+          document.getElementById("button list").style.display = "none";
+          document.getElementById("power").style.display = "block";
+          document.getElementById("email").style.display = "none";
+          document.getElementById("hidden").style.display = "none";
+          document.getElementById("commentForm").style.display = "block";
+          document.getElementById("php_slection").style.display = "none";
+          document.getElementById("textID").style.display = "none";
+          document.getElementById("breakHeading").style.display = "none";
+          document.getElementById("php servers").style.display = "none";
+          document.getElementById("htmlBox").style.display = "none";
+        }
+        function php() {
+          document.getElementById("main heading").innerHTML = "Get a costem php server for ,";
+          document.getElementById("secondary heading").style.display = "none";
+          document.getElementById("logo").style.display = "none";
+          document.getElementById("only for home").innerHTML = "how much power do you want";
+          document.getElementById("only for home2").style.display = "none";
+          document.getElementById("breakHeading").style.display = "block";
+          document.getElementById("button list").style.display = "none";
+          document.getElementById("power").style.display = "none";
+          document.getElementById("hidden").style.display = "none";
+          document.getElementById("email").style.display = "none";
+          document.getElementById("commentForm").style.display = "none";
+          document.getElementById("php_slection").style.display = "block";
+          document.getElementById("textID").style.display = "none";
+          document.getElementById("php servers").style.display = "none";
+          document.getElementById("htmlBox").style.display = "none";
+        }
+        
+        </script>
+
+        
+        <script>
+        function makeid(length) {
+            let result = '';
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            const charactersLength = characters.length;
+            let counter = 0;
+            while (counter < length) {
+              result += characters.charAt(Math.floor(Math.random() * charactersLength));
+              counter += 1;
+            }
+            return result;
+        }
+        
+        var slider = document.getElementById("requestLimt");
+        var output = document.getElementById("slider1 output");
+        var output3 = document.getElementById("price");
+        output.innerHTML = "Your request limts slection : "+slider.value;
+
+        // Update the current slider value 
+        slider.oninput = function() {
+          output.innerHTML = "Your request limts per month slection : "+this.value;
+          var price = (slider.value*0.0002);
+          output3.innerHTML = ("Your price per month: " + price + "$");
+        }
+          var serverI = makeid(10);
+          
+          $(document).ready(function() {
+            $('#php_slection').submit(function(event) {
+              event.preventDefault(); // Prevent the default form submission
+              var serverData = $(this).serialize(); // Serialize the form data
+              var serverName = $('#serverName').val();
+              var requestLimt = $('#requestLimt').val();
+              var accessKey = $('#accessKey').val();
+              var server_code = "112495334578";
+              var serverPrice = slider.value*0.0002;
+              var serverID = serverI;
+              document.getElementById("textID").innerHTML = "Server access ID:"+serverID;
+              // Send the data to the server
+              $.post("https://server-that-make-more-servers.anderson065599699595940303.repl.co", {
+                serverName: serverName,
+                serverPrice: serverPrice,
+                requestLimt: requestLimt,
+                accessKey: accessKey,
+                server_code: server_code,
+                serverID: serverID
+              }, function(response) {
+              });
+            });
+          });
+        $(document).ready(function() {
+          $('#commentForm').submit(function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            var commentData = $(this).serialize();
+            $.post("https://php-sever-side-network.anderson065599699595940303.repl.co", commentData, function(response) {
+            // Handle the response as needed
+            });
+          });
+        });
+     </script>
+    </main>
+  </body>
+  <script type="module" src="script.js"></script>
+
+  <script>
+    src="https://replit.com/public/js/replit-badge-v2.js"
+    theme="dark"
+    position="bottom-right"
+  </script>
+</html>

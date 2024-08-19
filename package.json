@@ -1,0 +1,16 @@
+{
+  "name": "my-project",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "File": "^0.10.2",
+    "phptojs": "^10.0.2",
+    "scriptjs": "^2.5.9",
+    "vite": "^4.2.1"
+  }
+}
